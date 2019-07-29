@@ -13,20 +13,25 @@ delay(1000);
 clearTimer(T1);
 while(time1(T1) < 10000){
 
-motor[rightmotor] = 100;
-motor[leftmotor] = 100;
+motor[rightmotor] = 127;
+motor[leftmotor] = 127;
 
-	if (SensorValue[in1] > 30){
-		motor[rightmotor] = 30;
+	if (SensorValue[in1] > 20){
+		motor[rightmotor] = 40;
 	}
 
 	else if (SensorValue[in1] == 0){
-		motor[leftmotor] = 100;
-		motor[rightmotor] = 100;
+		motor[leftmotor] = 127;
+		motor[rightmotor] = 127;
 	}
 
+	else if (SensorValue[in1] < 20){
+		motor[leftmotor] = 40;
+	}
+	
 	else{
-		motor[leftmotor] = 30;
+		motor[rightmotor] = 0
+		motor[leftmotor] = 0
 	}
 
 }
