@@ -20,18 +20,13 @@ motor[leftmotor] = 127;
 		motor[rightmotor] = 40;
 	}
 
-	else if (SensorValue[in1] == 0){
-		motor[leftmotor] = 127;
-		motor[rightmotor] = 127;
-	}
-
-	else if (SensorValue[in1] < 20){
+	else if (SensorValue[in1] < -20){
 		motor[leftmotor] = 40;
 	}
 	
 	else{
-		motor[rightmotor] = 0
-		motor[leftmotor] = 0
+		motor[rightmotor] = 127
+		motor[leftmotor] = 127
 	}
 
 }
