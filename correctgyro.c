@@ -16,12 +16,12 @@ while(time1(T1) < 10000){
 motor[rightmotor] = 100;
 motor[leftmotor] = 100;
 
-	if (SensorValue[in1] > 20){
+	if (SensorValue[in1] > 10){
 		motor[rightmotor] = 5;
 		motor[leftmotor] = 127;
 	}
 
-	else if (SensorValue[in1] < -20){
+	else if (SensorValue[in1] < -10){
 		motor[leftmotor] = 5;
 		motor[rightmotor] = 127;
 	}
