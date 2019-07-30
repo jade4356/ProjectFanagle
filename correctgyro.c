@@ -4,34 +4,37 @@
 
 task main()
 {
-	
-untilRelease(dgtl1);
 
-SensorType[in1] = sensorNone;
-delay(1000);
-SensorType[in1] = sensorGyro;
-delay(1000);
+	while(true){
+		while (SensorValue[StartButton] == 1){
+		}
 
-clearTimer(T1);
-while(time1(T1) < 10000){
 
-motor[rightmotor] = 100;
-motor[leftmotor] = 100;
+		SensorType[in1] = sensorNone;
+		delay(1000);
+		SensorType[in1] = sensorGyro;
+		delay(1000);
 
-	if (SensorValue[in1] > 10){
-		motor[rightmotor] = 5;
-		motor[leftmotor] = 127;
-	}
+		clearTimer(T1);
+		while(time1(T1) < 10000){
 
-	else if (SensorValue[in1] < -10){
-		motor[leftmotor] = 5;
-		motor[rightmotor] = 127;
-	}
-	
-	else{
 		motor[rightmotor] = 100;
 		motor[leftmotor] = 100;
-	}
 
-}
+			if (SensorValue[in1] > 10){
+				motor[rightmotor] = 5;
+				motor[leftmotor] = 127;
+			}
+
+			else if (SensorValue[in1] < -10){
+				motor[leftmotor] = 5;
+				motor[rightmotor] = 127;
+			}
+
+			else{
+				motor[rightmotor] = 100;
+				motor[leftmotor] = 100;
+			}
+
+	}
 }
