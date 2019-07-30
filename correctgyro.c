@@ -4,6 +4,8 @@
 
 task main()
 {
+	
+untilRelease(dgtl1);
 
 SensorType[in1] = sensorNone;
 delay(1000);
